@@ -10,3 +10,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+button {
+  font-weight: bold;
+}
+
+button.follow {
+  background-color: aquamarine;
+}
+
+button.unfollow {
+  background-color: #ef5f5f;
+}

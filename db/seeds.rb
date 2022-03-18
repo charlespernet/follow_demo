@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+nicks = %w[blanche atchoum dormeur grincheux joyeux prof simplet timide]
+
+users_attributes = nicks.map do |nick|
+  { email: "#{nick}@demo.fr", password: 'secret', nickname: nick }
+end
+
+User.create(users_attributes)

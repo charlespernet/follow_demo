@@ -1,0 +1,10 @@
+<div class='w-50 d-flex align-items-center justify-content-between' data-controller='follows' data-follows-id-value=<%= user.id %> data-follows-target='card'>
+  <p class='m-0'><%= user.nickname %></p>
+  <div class="p-1">
+    <% if current_user.is_following?(user) %>
+      <button class='unfollow' data-action='click->follows#unfollow'>Unfollow</button>
+    <% else %>
+      <button class='follow' data-action='click->follows#follow'>Follow</button>
+    <% end %>
+  </div>
+</div>
